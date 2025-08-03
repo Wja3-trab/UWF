@@ -1,0 +1,170 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+    /*color-scheme: light dark;*/
+    color: #222222;
+}
+
+html, body {
+    background-color: #F9F9F6;
+    margin: 0;
+    width: 100%;
+}
+
+.container {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.head {
+    background-color: #222222;
+    margin: 0 auto;
+    width: 100%;
+    height: 4em;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headList > li > a {
+    text-decoration: none;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fde03c;
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
+
+.close-menu {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 1rem;
+}
+
+.headList {
+  position: fixed;
+  list-style: none;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.headList.show {
+  right: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FFD700;
+    margin: auto;
+}
+
+.body {
+    width: 100%;
+    height: fit-content;
+    margin: 0 5% 0 0;
+    position: relative;
+    z-index: 999;
+}
+
+/*.mission {
+    background-color: #1EB53A;
+    color: #F9F9F6;
+    text-align: center;
+    margin: auto;
+    padding: 1.5rem 0;
+}*/
+
+@media (min-width: 1250px) {
+    #missionParagraph {
+        width: 30%;
+    }
+    #vissionParagraph {
+        width: 30%;
+    }
+    #targetParagraph {
+        width: 30%;
+    }
+}
+
+#missionParagraph {
+    margin: auto;
+}
+
+#vissionParagraph {
+    margin: auto;
+}
+
+#targetParagraph {
+    margin: auto;
+}
+
+
+.title, .vission {
+    background-color: black;
+    color: #fde03c;
+    text-align: center;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.mission, .target {
+    background-color: #fde03c;
+    color: black;
+    font-size: large;
+    text-align: center;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.foot {
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    color: #fde03c;
+    display: flex;
+    justify-content: center;
+}
+
+.footList {
+    list-style: none;
+}
+
+.footList > li {
+    padding: 5px;
+}
