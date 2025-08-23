@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -10,9 +12,12 @@
   --grey: #818080;
   --light-bg: #f9f9f6;
   --white: #ffffff;
+  --glass: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -22,7 +27,9 @@ html, body {
 }
 
 .header {
-  background: linear-gradient(135deg, var(--black), var(--grey));
+  background-color: var(--blue);
+  border-bottom: 1px solid var(--white);
+  border-radius: 0 0 10px 10px;
   padding: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -42,7 +49,7 @@ html, body {
   font-size: 2rem;
   background: none;
   border: none;
-  color: var(--yellow);
+  color: var(--white);
   cursor: pointer;
   position: fixed;
   top: 1rem;
@@ -71,7 +78,7 @@ html, body {
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease-in-out;
 }
 
@@ -105,28 +112,81 @@ html, body {
   .nav {
     display: flex;
   }
+
+  .title-section {
+    border: 10px solid var(--blue);
+    background-image: url('../IMAGES/pexels-safari-consoler-3290243-11834936-customXL.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    aspect-ratio: 2/1;
+    width: 100%;
+  }
+
+  #bannerTitle {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #bannerText {
+    font-size: 1.5rem;
+  }
+}
+
+/*.title-text {
+  width: fit-content;
+  height: fit-content;
+  background: var(--glass);
+  border: 1px var(--glass-border) solid;
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px) brightness(1.1);
+}*/
+
+
+
+@media (max-width: 767px) {
+
+  .title-section {
+    border: 2px solid var(--blue);
+    background-image: url('../IMAGES/pexels-safari-consoler-3290243-11834936.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+    color: var(--white);
+    padding: 0 0 6rem 0;
+    border-radius: 10px;
+    aspect-ratio: 2/1;
+    width: 100%;
+  }
+
+  #bannerTitle {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #bannerText {
+    font-size: 1rem;
+  }
 }
 
 .main-content {
-  padding: 2rem 1rem;
-  max-width: 1200px;
   margin: auto;
 }
 
-.title-section {
-  text-align: center;
-  background: linear-gradient(135deg, var(--grey), var(--blue), var(--green));
-  color: var(--yellow);
-  padding: 3rem 1rem;
-  border-radius: 10px;
-}
 
 .info-section {
   text-align: center;
   margin-top: 2rem;
   padding: 2rem 1rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .mission {
