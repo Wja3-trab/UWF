@@ -121,9 +121,10 @@ body {
 
 
 #donateButton {
-  background: var(--glass);
+  background: var(--glass, --glass-border);
   border-radius: 10px;
   border: 1px var(--blue) solid;
+  -webkit-backdrop-filter: blur(5px) brightness(1.1);
   backdrop-filter: blur(5px) brightness(1.1);
   color: var(--blue);
   margin-bottom: 5px !important;
