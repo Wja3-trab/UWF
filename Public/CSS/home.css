@@ -11,7 +11,7 @@
   --yellow: #FCD116;
   --black: #000000;
   --grey: #818080;
-  --light-bg: #f9f9f6;
+  --light-bg: #d3d3d35b;
   --white: #ffffff;
   --glass: rgba(255, 255, 255, 0.1);
   --glass-dark: rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: var(--light-bg);
+  background-color: var(--white);
   color: var(--black);
   scroll-behavior: smooth;
 }
@@ -178,7 +178,7 @@ body {
 @media (max-width: 767px) {
 
   .title-section {
-    border: 2px solid var(--blue);
+    /*border: 2px solid var(--blue);*/
     background-image: url('../IMAGES/pexels-safari-consoler-3290243-11834936.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,7 +186,7 @@ body {
     text-align: center;
     color: var(--white);
     padding: 0 0 6rem 0;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     aspect-ratio: 2/1;
     width: 100%;
   }
@@ -221,6 +221,69 @@ body {
     color: var(--white);
     transition: 0.5s;
   }
+
+  .mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+  }
+
+  .missionText {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .missionText>h2 {
+    font-size: 1.15rem !important;
+  }
+
+  .missionText>p {
+    font-size: 1rem !important;
+  }
+
+  .mission img {
+    width: 300px !important;
+    height: 250px !important;
+
+  }
+
+  .vision {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .visionText>h2 {
+    font-size: 1.15rem !important;
+  }
+
+  .visionText>p {
+    font-size: 1rem !important;
+  }
+
+  .vision>img {
+    width: 170px !important;
+    height: 320px !important;
+  }
+
+  .targetText>h2 {
+    font-size: 1.15rem !important;
+  }
+
+  .targetText>p {
+    font-size: 1rem !important;
+  }
+
+  .target>img {
+    width: 220px !important;
+    height: 320px !important;
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+
+  
+.info-section {
+  margin: 5rem 0 !important;
+}
 }
 
 .main-content {
@@ -229,33 +292,112 @@ body {
 
 
 .info-section {
-  text-align: center;
-  margin-top: 2rem;
+  margin: 15rem 0;
   padding: 2rem 1rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .mission {
-  background: linear-gradient(135deg, var(--green), var(--yellow));
-  color: var(--black);
+  background: var(--light-bg);
+  border: 10px var(--blue) solid;
+  color: var(--blue);
+  display: flex;
+  justify-content: space-between;
 }
 
+.missionText {
+  width: 33%;
+  text-align: left;
+}
+
+.missionText>h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.visionText>h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.targetText>h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.missionText>p {
+  font-size: 1.5rem;
+}
+
+.visionText>p {
+  font-size: 1.5rem;
+}
+
+.targetText>p {
+  font-size: 1.5rem;
+}
+
+.mission img {
+  border-radius: 10px;
+  width: 33%;
+  height: auto;
+}
+
+
 .vision {
-  background: linear-gradient(135deg, var(--yellow), var(--blue));
+  background: var(--blue);
+  border: 10px var(--light-bg) solid;
   color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.visionText {
+  width: 33%;
+  text-align: right;
+}
+
+/*.visionText>h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.visionText>p {
+  font-size: 1.5rem;
+}*/
+
+.vision>img {
+  border-radius: 10px;
+  width: 33%;
+  height: auto;
 }
 
 .target {
-  background: linear-gradient(135deg, var(--blue), var(--green), var(--grey));
-  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 10px var(--blue) solid;
+  background: var(--light-bg);
+  color: var(--blue);
+  margin-bottom: 0 !important;
+}
+
+.target>img {
+  width: 33%;
+  border-radius: 50%;
+  opacity: 0.9;
 }
 
 .footer {
-  background: linear-gradient(135deg, var(--grey), var(--black));
-  color: var(--yellow);
+  border-top: 1px solid var(--white);
+  border-radius: 10px 0;
+  background: var(--blue);
+  color: var(--white);
   text-align: center;
   padding: 2rem 1rem;
+  font-size: 1.5rem;
 }
 
 .footer-list {
