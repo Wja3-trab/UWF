@@ -1,0 +1,284 @@
+:root {
+  --orange: #E4572E;
+  --blue: #E4572E; /* Replaces all former blue values */
+  --white: #ffffff;
+  --black: #000000;
+  --light-bg: #f7f7f7;
+  --glass: rgba(255, 255, 255, 0.1);
+  --glass-dark: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background: var(--white);
+  color: var(--black);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--orange);
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.title-section {
+  background-image: url('../IMAGES/pexels-safari-consoler-3290243-11834936-customXL.JPG');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  position: relative;
+  text-align: center;
+}
+
+.title-text {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+#bannerTitle {
+  font-size: 2.8rem;
+  color: var(--orange);
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+#donateButton {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#donateButton:hover {
+  background-color: #c9461d;
+}
+
+.vertical-tabs {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: var(--white);
+  border-left: 2px solid var(--orange);
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.vertical-tabs ul {
+  list-style: none;
+}
+
+.vertical-tabs li {
+  border-bottom: 1px solid #eee;
+}
+
+.vertical-tabs a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--orange);
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.vertical-tabs a:hover {
+  background-color: var(--light-bg);
+}
+
+.floating-donate-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--orange);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.floating-donate-btn:hover {
+  background-color: #c9461d;
+}
+
+.page-content {
+  padding: 5rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Hamburger Button (mobile only) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--orange);
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+/* Close Button inside Menu */
+.close-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--black);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/* Vertical Tabs */
+.vertical-tabs {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: var(--white);
+  border-left: 2px solid var(--orange);
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.vertical-tabs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vertical-tabs li {
+  border-bottom: 1px solid #eee;
+}
+
+.vertical-tabs a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--orange);
+  font-weight: bold;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .vertical-tabs {
+    right: -250px;
+    top: 0;
+    transform: none;
+    height: 100vh;
+    width: 250px;
+    transition: right 0.3s ease;
+    padding-top: 4rem;
+  }
+
+  .vertical-tabs.show {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .close-menu {
+    display: block;
+  }
+
+  .floating-donate-btn {
+    bottom: 5rem;
+    right: 1rem;
+  }
+}
+
+.page-content {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  color: var(--black);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.page-content h1, 
+.page-content h2, 
+.page-content h3 {
+  color: var(--orange);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+}
+
+.page-content h1 {
+  font-size: 3rem;
+}
+
+.page-content h2 {
+  font-size: 2.2rem;
+}
+
+.page-content h3 {
+  font-size: 1.6rem;
+}
+
+.page-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #333; /* slightly softer black for better readability */
+}
+
+.page-content a {
+  color: var(--orange);
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.page-content a:hover {
+  color: #c9461d;
+  text-decoration: none;
+}
+
+/* Lists styling */
+.page-content ul, .page-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.page-content li {
+  margin-bottom: 0.7rem;
+}
+
