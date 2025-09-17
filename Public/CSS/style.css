@@ -1,6 +1,7 @@
 :root {
   --orange: #E4572E;
-  --blue: #E4572E; /* Replaces all former blue values */
+  --blue: #E4572E;
+  /* Replaces all former blue values */
   --white: #ffffff;
   --black: #000000;
   --light-bg: #f7f7f7;
@@ -14,7 +15,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
   background: var(--white);
@@ -59,7 +61,7 @@ html, body {
   font-size: 2.8rem;
   color: var(--orange);
   font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
 }
 
@@ -79,38 +81,6 @@ html, body {
   background-color: #c9461d;
 }
 
-.vertical-tabs {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  background: var(--white);
-  border-left: 2px solid var(--orange);
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-.vertical-tabs ul {
-  list-style: none;
-}
-
-.vertical-tabs li {
-  border-bottom: 1px solid #eee;
-}
-
-.vertical-tabs a {
-  display: block;
-  padding: 1rem;
-  text-decoration: none;
-  color: var(--orange);
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.vertical-tabs a:hover {
-  background-color: var(--light-bg);
-}
-
 .floating-donate-btn {
   position: fixed;
   bottom: 2rem;
@@ -121,7 +91,7 @@ html, body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
@@ -135,55 +105,31 @@ html, body {
   margin: auto;
 }
 
-/* Hamburger Button (mobile only) */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: var(--orange);
+.horizontal-tabs {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1100;
-  cursor: pointer;
-}
-
-/* Close Button inside Menu */
-.close-menu {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: var(--black);
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-}
-
-/* Vertical Tabs */
-.vertical-tabs {
-  position: fixed;
-  top: 50%;
   right: 0;
-  transform: translateY(-50%);
   background: var(--white);
-  border-left: 2px solid var(--orange);
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-  z-index: 1000;
 }
 
-.vertical-tabs ul {
+.horizontal-tabs ul {
+  display: flex;
+  justify-content: right;
   list-style: none;
   padding: 0;
 }
 
-.vertical-tabs li {
-  border-bottom: 1px solid #eee;
+.horizontal-tabs li {
+  border-left: 2px solid var(--orange);
 }
 
-.vertical-tabs a {
+.horizontal-tabs li :hover {
+  transition: 0.5s;
+  opacity: 0.8;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.horizontal-tabs a {
   display: block;
   padding: 1rem;
   text-decoration: none;
@@ -193,26 +139,19 @@ html, body {
 
 /* MOBILE VIEW */
 @media (max-width: 768px) {
-  .vertical-tabs {
-    right: -250px;
-    top: 0;
-    transform: none;
-    height: 100vh;
-    width: 250px;
-    transition: right 0.3s ease;
-    padding-top: 4rem;
+  .header {
+    padding: 0.25rem;
   }
 
-  .vertical-tabs.show {
-    right: 0;
+  .horizontal-tabs a {
+    padding: 0.25rem;
+    font-size: xx-small;
   }
 
-  .menu-toggle {
-    display: block;
-  }
-
-  .close-menu {
-    display: block;
+  .logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
   }
 
   .floating-donate-btn {
@@ -231,8 +170,8 @@ html, body {
   font-weight: 400;
 }
 
-.page-content h1, 
-.page-content h2, 
+.page-content h1,
+.page-content h2,
 .page-content h3 {
   color: var(--orange);
   text-transform: uppercase;
@@ -256,7 +195,8 @@ html, body {
 .page-content p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
-  color: #333; /* slightly softer black for better readability */
+  color: #333;
+  /* slightly softer black for better readability */
 }
 
 .page-content a {
@@ -272,7 +212,8 @@ html, body {
 }
 
 /* Lists styling */
-.page-content ul, .page-content ol {
+.page-content ul,
+.page-content ol {
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--black);
@@ -281,4 +222,3 @@ html, body {
 .page-content li {
   margin-bottom: 0.7rem;
 }
-
