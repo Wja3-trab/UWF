@@ -58,11 +58,29 @@ body {
 }
 
 #bannerTitle {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   color: var(--orange);
   font-weight: bold;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
+}
+
+.bannerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.subtitle-section {
+  width: 75%;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--orange);
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  margin: 1rem auto 4rem auto;
 }
 
 #donateButton {
@@ -135,6 +153,25 @@ body {
   text-decoration: none;
   color: var(--orange);
   font-weight: bold;
+}
+
+.content-section {
+  color: var(--orange);
+  width: 75%;
+  margin: 1rem auto 4rem auto;
+}
+
+#contentHeader {
+  font-size: 1.7rem;
+}
+
+.content-section > p {
+  font-size: 1.2rem;
+}
+
+.contentList li {
+  list-style: none;
+  margin: 1rem auto;
 }
 
 /* MOBILE VIEW */
