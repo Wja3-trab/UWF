@@ -88,7 +88,7 @@ body {
   color: var(--white);
   border: none;
   padding: 0.8rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 1.2rem;
   cursor: pointer;
   text-decoration: none;
@@ -124,7 +124,7 @@ body {
 }
 
 .horizontal-tabs {
-  position: fixed;
+  position: absolute;
   right: 0;
   background: var(--white);
 }
@@ -157,21 +157,20 @@ body {
 
 .content-section {
   color: var(--orange);
-  width: 75%;
-  margin: 1rem auto 4rem auto;
+  margin: 1rem auto 5rem auto;
 }
 
-#contentHeader {
-  font-size: 1.7rem;
+.bold {
+  font-weight: bold;
 }
 
-.content-section > p {
-  font-size: 1.2rem;
+.cursive {
+  font-style: italic;
 }
 
 .contentList li {
   list-style: none;
-  margin: 1rem auto;
+  margin: auto auto 1rem auto;
 }
 
 /* MOBILE VIEW */
@@ -195,10 +194,49 @@ body {
     bottom: 5rem;
     right: 1rem;
   }
+
+  #donateButton {
+    padding: 0.4rem 1rem !important;
+    border-radius: 50px;
+    font-size: 1rem !important;
+  }
+
+  .page-content {
+    font-size: 1rem;
+  }
+
+  .page-content h1,
+  .page-content h2,
+  .page-content h3 {
+    letter-spacing: 1px !important;
+  }
+
+  .page-content h1 {
+    font-size: 2rem !important;
+  }
+
+  .page-content h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .page-content h3 {
+    font-size: 1rem !important;
+  }
+
+  .page-content p {
+    margin-bottom: 1rem !important;
+    font-size: 1rem !important;
+  }
+
+  .page-content a {
+    font-weight: 400 !important;
+  }
+
 }
 
 .page-content {
-  max-width: 900px;
+  width: 80%;
+  max-width: 950px;
   margin: 3rem auto;
   padding: 0 1.5rem;
   color: var(--black);
@@ -222,7 +260,7 @@ body {
 }
 
 .page-content h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .page-content h3 {
@@ -231,9 +269,8 @@ body {
 
 .page-content p {
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  color: #333;
-  /* slightly softer black for better readability */
+  font-size: 1.2rem;
+  color: var(--orange);
 }
 
 .page-content a {
@@ -253,9 +290,10 @@ body {
 .page-content ol {
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
-  color: var(--black);
+  color: var(--orange);
 }
 
 .page-content li {
   margin-bottom: 0.7rem;
+  font-size: 1.2rem;
 }
