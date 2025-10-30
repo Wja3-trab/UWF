@@ -12,84 +12,86 @@
     ></script>
   </head>
   <body>
-    <header class="header">
-      <a href="index.html" class="logo" aria-label="Home">
-        <img src="logo.png" alt="UWF Logo" />
-      </a>
-      <nav class="horizontal-tabs" id="mobileMenu">
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="project.html">Our Project</a></li>
+    <!-- FLOATING HEADER ON TOP OF HERO IMAGE -->
+    <header class="modern-header">
+      <nav class="nav-bar">
+        <ul class="nav-left">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="project.html">Our Projects</a></li>
+        </ul>
+
+        <div class="logo-center">
+          <a href="index.html" class="active" aria-label="Home">
+            <img src="logo.png" alt="UWF-Logo" />
+            <div class="logo-text" class="active">
+              <h1>Ummah Workshops Foundation</h1>
+              <p>Empowering through community and education</p>
+            </div>
+          </a>
+        </div>
+
+        <ul class="nav-right">
           <li><a href="mission.html">Mission & Vision</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="donate.html">Donate</a></li>
         </ul>
       </nav>
     </header>
 
-    <a href="#donate" class="floating-donate-btn">Donate</a>
+    <!-- HERO SECTION -->
+    <section class="title-section">
+      <div class="title-text">
+        <h1 id="bannerTitle">
+          <div class="bannerText">
+            <span>Building futures</span>
+            <span>It starts with a child. It grows with a community.</span>
+            <span>Real support. Real skills. Real change.</span>
+          </div>
+        </h1>
+      </div>
 
-    <div>
-      <section class="title-section">
-        <div class="title-text">
-          <h1 id="bannerTitle">
-            <div class="bannerText">
-              <span>Building futures<br /></span>
-              <span
-                >It starts with a child. It grows with a community<br
-              /></span>
-              <span>Real support. Real skills. Real change</span>
-            </div>
-          </h1>
-          <a href="#donate" id="donateButton">Donate</a>
-        </div>
-      </section>
-      <section class="subtitle-section">
-        <p>
-          We go beyond short-term aid. At Ummah Works Foundation, we support
-          orphans by strengthening the communities around them, through
-          education, local projects, and longterm opportunity.
-        </p>
-      </section>
-    </div>
+      <a href="#donate" id="donateButton">Donate</a>
+    </section>
 
+    <!-- PAGE CONTENT -->
     <main class="page-content">
       <section class="content-section">
         <h2>What we believe</h2>
         <p>
-          <span id="bold"
-            >We believe every orphan deserves more than survival.</span
-          ><br />
-          They deserve a chance to grow, learn, and lead. All while being within
-          a strong, self-reliant community. That’s why we invest in sustainable
-          projects like schools, farms, and local businesses, giving children
-          the tools and environment to thrive.
+          <strong>We believe every orphan deserves more than survival.</strong>
+          They deserve a chance to grow, learn, and lead — within a strong,
+          self-reliant community. That’s why we invest in sustainable projects
+          like schools, farms, and local businesses, giving children the tools
+          and environment to thrive.
         </p>
       </section>
+
       <section class="content-section">
         <h2>What we do</h2>
-        <ul class="contentList fa-ul">
-          <li>
-            <span class="fa-li"
-              ><i class="fa-solid fa-book-open-reader"></i
-            ></span>
-            Child-Centered Support – Care, education, and mentorship for
-            orphans.
-          </li>
-          <li>
-            <span class="fa-li"><i class="fa-solid fa-bridge"></i></span>
-            Community Development – Schools, training, and local infrastructure.
-          </li>
-          <li>
-            <span class="fa-li"><i class="fa-solid fa-wheat-awn"></i></span>
-            Sustainable Projects – Farming, entrepreneurship, and small
-            businesses.
-          </li>
-          <li>
-            <span class="fa-li"><i class="fa-solid fa-handshake"></i></span
-            >Local Partnerships – We work with communities, not for them
-          </li>
-        </ul>
+        <div class="card-grid">
+          <div class="info-card">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <h3>Child-Centered Support</h3>
+            <p>Care, education, and mentorship for orphans.</p>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-bridge"></i>
+            <h3>Community Development</h3>
+            <p>Schools, training, and local infrastructure.</p>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-wheat-awn"></i>
+            <h3>Sustainable Projects</h3>
+            <p>Farming, entrepreneurship, and small businesses.</p>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-handshake"></i>
+            <h3>Local Partnerships</h3>
+            <p>We work with communities, not for them.</p>
+          </div>
+        </div>
       </section>
     </main>
   </body>
